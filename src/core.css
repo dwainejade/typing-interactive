@@ -1,0 +1,46 @@
+.primary-font-bold {
+  font-family: ropa-mix-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-family: ropa-mix-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+button {
+  cursor: pointer;
+}
+p {
+  margin: 0;
+  line-height: 1.4;
+}
+.hr {
+  margin: 1em 0;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1em;
+  min-height: 50px;
+  border: 2px solid #1a1818;
+  background-color: #ffffff;
+  border-bottom: 5px solid black;
+  transition: all 0.2s ease-out;
+  transform: scale(1, 1);
+  width: 100%;
+  margin: 0 auto;
+  max-width: 250px;
+}
+.btn:hover {
+  background-color: #fcd26d;
+  transform: scale(1.05, 1.05);
+}

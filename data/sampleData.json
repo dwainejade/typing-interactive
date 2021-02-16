@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "sample-1",
+    "title": "Sample 1",
+    "description": "This is the sample description for the first sample."
+  },
+  {
+    "slug": "sample-2",
+    "title": "Sample 2",
+    "description": "This is the sample description for the second sample."
+  }
+]
