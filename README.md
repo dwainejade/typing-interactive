@@ -2,10 +2,12 @@
 
 This is a starter template for interactives using Gatsby. Included in this template: 
 
-- Template Page using `createPages` and sample data in the `data` folder
+- Template Page using `createPages` API
+- Sample data in the `data` folder
 - Jest & React Testing Library for unit testing
 - Required iFrame scripts for interactive placement in LMS
-- Normalize.css stylesheet
+- `normalize.css` stylesheet
+- `core.less` stylesheet (global styles go here)
 
 ## Testing
 

@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/sel-4-personality-quiz/public`,
+  pathPrefix: `/gatsby-template/public`,
   siteMetadata: {
     title: `StrongMind Gatsby Starter`,
     description: `A starter template for interactive projects that use Gatsby.`,

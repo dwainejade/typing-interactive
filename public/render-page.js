@@ -111,8 +111,7 @@ const { hot } = __webpack_require__(/*! react-hot-loader/root */ "./node_modules
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": hot(preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js"))),
-  "component---src-pages-index-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))),
-  "component---src-templates-template-page-js": hot(preferDefault(__webpack_require__(/*! ./src/templates/TemplatePage.js */ "./src/templates/TemplatePage.js")))
+  "component---src-pages-index-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")))
   }
 
 
@@ -148,6 +147,11 @@ var plugins = [{
     "crossOrigin": "anonymous",
     "include_favicon": true,
     "cacheDigest": "9d8035ca9f26d649ef99e3ea9acbc6d3"
+  }
+}, {
+  plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
+  options: {
+    "plugins": []
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -1966,6 +1970,38 @@ function stripPrefix(str, prefix = ``) {
 
   return str;
 }
+
+/***/ }),
+
+/***/ "./gatsby-ssr.js":
+/*!***********************!*\
+  !*** ./gatsby-ssr.js ***!
+  \***********************/
+/*! exports provided: onRenderBody */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onRenderBody", function() { return onRenderBody; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+const onRenderBody = ({
+  setPostBodyComponents
+}) => {
+  setPostBodyComponents([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+    key: "https://code.jquery.com/jquery-3.2.1.slim.min.js",
+    src: "https://code.jquery.com/jquery-3.2.1.slim.min.js",
+    integrity: "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN",
+    crossOrigin: "anonymous",
+    defer: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+    key: "https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.min.js",
+    src: "https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.11/iframeResizer.contentWindow.min.js",
+    integrity: "sha256-EH+7IdRixWtW5tdBwMkTXL+HvW5tAqV4of/HbAZ7nEc=",
+    crossOrigin: "anonymous"
+  })]);
+};
 
 /***/ }),
 
@@ -31718,244 +31754,6 @@ module.exports = str => encodeURIComponent(str).replace(/[!'()*]/g, x => `%${x.c
 
 /***/ }),
 
-/***/ "./public/page-data/sq/d/3649515864.json":
-/*!***********************************************!*\
-  !*** ./public/page-data/sq/d/3649515864.json ***!
-  \***********************************************/
-/*! exports provided: data, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"data\":{\"site\":{\"siteMetadata\":{\"title\":\"StrongMind Gatsby Starter\"}}}}");
-
-/***/ }),
-
-/***/ "./public/page-data/sq/d/63159454.json":
-/*!*********************************************!*\
-  !*** ./public/page-data/sq/d/63159454.json ***!
-  \*********************************************/
-/*! exports provided: data, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"data\":{\"site\":{\"siteMetadata\":{\"title\":\"StrongMind Gatsby Starter\",\"description\":\"A starter template for interactive projects that use Gatsby.\",\"author\":\"StrongMind\"}}}}");
-
-/***/ }),
-
-/***/ "./src/components/header.js":
-/*!**********************************!*\
-  !*** ./src/components/header.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-const Header = ({
-  siteTitle
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("header", {
-  style: {
-    background: `rebeccapurple`,
-    marginBottom: `1.45rem`
-  }
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-  style: {
-    margin: `0 auto`,
-    maxWidth: 960,
-    padding: `1.45rem 1.0875rem`
-  }
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
-  style: {
-    margin: 0
-  }
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_0__["Link"], {
-  to: "/",
-  style: {
-    color: `white`,
-    textDecoration: `none`
-  }
-}, siteTitle))));
-
-Header.propTypes = {
-  siteTitle: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
-};
-Header.defaultProps = {
-  siteTitle: ``
-};
-/* harmony default export */ __webpack_exports__["default"] = (Header);
-
-/***/ }),
-
-/***/ "./src/components/layout.css":
-/*!***********************************!*\
-  !*** ./src/components/layout.css ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "./src/components/layout.js":
-/*!**********************************!*\
-  !*** ./src/components/layout.js ***!
-  \**********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _public_page_data_sq_d_3649515864_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/3649515864.json */ "./public/page-data/sq/d/3649515864.json");
-var _public_page_data_sq_d_3649515864_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../public/page-data/sq/d/3649515864.json */ "./public/page-data/sq/d/3649515864.json", 1);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./src/components/header.js");
-/* harmony import */ var _layout_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./layout.css */ "./src/components/layout.css");
-/* harmony import */ var _layout_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_layout_css__WEBPACK_IMPORTED_MODULE_4__);
-
-
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-
-
-
-
-const Layout = ({
-  children
-}) => {
-  var _data$site$siteMetada;
-
-  const data = _public_page_data_sq_d_3649515864_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_header__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    siteTitle: ((_data$site$siteMetada = data.site.siteMetadata) === null || _data$site$siteMetada === void 0 ? void 0 : _data$site$siteMetada.title) || `Title`
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    style: {
-      margin: `0 auto`,
-      maxWidth: 960,
-      padding: `0 1.0875rem 1.45rem`
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", null, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("footer", {
-    style: {
-      marginTop: `2rem`
-    }
-  }, "\xA9 ", new Date().getFullYear(), ", Built with", ` `, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: "https://www.gatsbyjs.com"
-  }, "Gatsby"))));
-};
-
-Layout.propTypes = {
-  children: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.node.isRequired
-};
-/* harmony default export */ __webpack_exports__["default"] = (Layout);
-
-/***/ }),
-
-/***/ "./src/components/seo.js":
-/*!*******************************!*\
-  !*** ./src/components/seo.js ***!
-  \*******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _public_page_data_sq_d_63159454_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/63159454.json */ "./public/page-data/sq/d/63159454.json");
-var _public_page_data_sq_d_63159454_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../public/page-data/sq/d/63159454.json */ "./public/page-data/sq/d/63159454.json", 1);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-helmet */ "react-helmet");
-/* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_3__);
-
-
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-
-
-
-function SEO({
-  description,
-  lang,
-  meta,
-  title
-}) {
-  var _site$siteMetadata, _site$siteMetadata2;
-
-  const {
-    site
-  } = _public_page_data_sq_d_63159454_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = (_site$siteMetadata = site.siteMetadata) === null || _site$siteMetadata === void 0 ? void 0 : _site$siteMetadata.title;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_helmet__WEBPACK_IMPORTED_MODULE_3__["Helmet"], {
-    htmlAttributes: {
-      lang
-    },
-    title: title,
-    titleTemplate: defaultTitle ? `%s | ${defaultTitle}` : null,
-    meta: [{
-      name: `description`,
-      content: metaDescription
-    }, {
-      property: `og:title`,
-      content: title
-    }, {
-      property: `og:description`,
-      content: metaDescription
-    }, {
-      property: `og:type`,
-      content: `website`
-    }, {
-      name: `twitter:card`,
-      content: `summary`
-    }, {
-      name: `twitter:creator`,
-      content: ((_site$siteMetadata2 = site.siteMetadata) === null || _site$siteMetadata2 === void 0 ? void 0 : _site$siteMetadata2.author) || ``
-    }, {
-      name: `twitter:title`,
-      content: title
-    }, {
-      name: `twitter:description`,
-      content: metaDescription
-    }].concat(meta)
-  });
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``
-};
-SEO.propTypes = {
-  description: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
-  lang: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
-  meta: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object),
-  title: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string.isRequired
-};
-/* harmony default export */ __webpack_exports__["default"] = (SEO);
-
-/***/ }),
-
 /***/ "./src/pages/404.js":
 /*!**************************!*\
   !*** ./src/pages/404.js ***!
@@ -31967,15 +31765,9 @@ SEO.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
-/* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/seo */ "./src/components/seo.js");
 
 
-
-
-const NotFoundPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_seo__WEBPACK_IMPORTED_MODULE_2__["default"], {
-  title: "404: Not found"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "404: Not Found"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You just hit a route that doesn't exist... the sadness."));
+const NotFoundPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "404: Not Found"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You just hit a route that doesn't exist... the sadness."));
 
 /* harmony default export */ __webpack_exports__["default"] = (NotFoundPage);
 
@@ -31997,38 +31789,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const IndexPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Gatsby Template"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This is where you can put links for each individual lesson. This page is for internal use only."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-  to: "/page-2/"
-}, "Go to page 2"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
+  to: "/sample-1/"
+}, "Go to Sample 1 page"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  to: "/sample-2/"
+}, "Go to Sample 2 page"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);
-
-/***/ }),
-
-/***/ "./src/templates/TemplatePage.js":
-/*!***************************************!*\
-  !*** ./src/templates/TemplatePage.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
- // grab the data
-
-const query = "2486820758";
-
-const TemplatePage = ({
-  data
-}) => {
-  const interactiveData = data.sampleDataJson;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: `Main ${interactiveData.slug}`
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, interactiveData.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, interactiveData.description));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (TemplatePage);
 
 /***/ }),
 

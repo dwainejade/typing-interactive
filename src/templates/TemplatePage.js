@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
+import Header from "../components/Header"
 
 // grab the data
 export const query = graphql`
@@ -16,8 +17,8 @@ const TemplatePage = ({ data }) => {
   const interactiveData = data.sampleDataJson
 
   return (
-    <div className={`Main ${interactiveData.slug}`}>
-      <h1>{interactiveData.title}</h1>
+    <div data-testid="header" className={`Main ${interactiveData.slug}`}>
+      <Header title={interactiveData.title} />
       <p>{interactiveData.description}</p>
     </div>
   )
