@@ -1,8 +1,8 @@
 module.exports = {
-  pathPrefix: `/gatsby-template/public`,
+  pathPrefix: `/sandbox-cb/public`,
   siteMetadata: {
-    title: `StrongMind Gatsby Starter`,
-    description: `A starter template for interactive projects that use Gatsby.`,
+    title: `Sandbox`,
+    description: `Sandbox`,
     author: `StrongMind`,
   },
   plugins: [
@@ -23,8 +23,8 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -34,8 +34,37 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     typekit: {
+    //       id: "rua0zro",
+    //     },
+    //   },
+    // },
+    // {
+    //   resolve: "gatsby-plugin-react-axe",
+    //   options: {
+    //     // Integrate react-axe in production. This defaults to false.
+    //     showInProduction: false,
+
+    //     // Options to pass to axe-core.
+    //     // See: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#api-name-axeconfigure
+    //     // axeOptions: {
+    //     // Your axe-core options.
+    //     // },
+    //     // Context to pass to axe-core.
+    //     // See: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#context-parameter
+    //     // axeContext: {
+    //     // Your axe-core context.
+    //     // }
+    //   },
+    // },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
