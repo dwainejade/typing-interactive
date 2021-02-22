@@ -1,20 +1,15 @@
-.fragment {
-  background: none;
-  cursor: pointer;
-  &.active {
-    background: yellow;
-  }
-}
-.Slider {
-  position: relative;
-  height: 500px;
-  width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
+.Main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  min-height: 525px; // reqd for interactive to display correctly in H2. adjust if needed.
+  width: 100vw;
+  max-width: 920px; 
 }
 
-.Text {
-  margin: 10px;
-  border: 1px solid black;
-  padding: 20px;
+.Header {
+  text-align: center;
+  width: 100%;
+  background-color: goldenrod;
 }

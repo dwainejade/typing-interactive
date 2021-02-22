@@ -111,7 +111,8 @@ const { hot } = __webpack_require__(/*! react-hot-loader/root */ "./node_modules
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": hot(preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/404.js */ "./src/pages/404.js"))),
-  "component---src-pages-index-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")))
+  "component---src-pages-index-js": hot(preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))),
+  "component---src-templates-template-page-js": hot(preferDefault(__webpack_require__(/*! ./src/templates/TemplatePage.js */ "./src/templates/TemplatePage.js")))
   }
 
 
@@ -140,13 +141,13 @@ var plugins = [{
     "background_color": "#663399",
     "theme_color": "#663399",
     "display": "minimal-ui",
-    "icon": "src/images/gatsby-icon.png",
+    "icon": "src/images/icon.png",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "4a9773549091c227cd2eb82ccd9c5e3a"
+    "cacheDigest": "9d8035ca9f26d649ef99e3ea9acbc6d3"
   }
 }, {
   plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
@@ -31754,6 +31755,192 @@ module.exports = str => encodeURIComponent(str).replace(/[!'()*]/g, x => `%${x.c
 
 /***/ }),
 
+/***/ "./src/components/ActivityScreen.js":
+/*!******************************************!*\
+  !*** ./src/components/ActivityScreen.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./src/components/Header.js");
+
+
+
+
+
+const ActivityScreen = ({
+  state,
+  setState
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("main", {
+    "data-testid": "activity",
+    className: "ActivityScreen"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: state.title
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Main Activity Content"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => setState({ ...state,
+      endScreenActive: true,
+      activityScreenActive: false
+    })
+  }, "Skip to the end"));
+};
+
+ActivityScreen.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  lessonTitle: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  startActivity: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
+ActivityScreen.defaultProps = {
+  title: ``,
+  lessonTitle: ``
+};
+/* harmony default export */ __webpack_exports__["default"] = (ActivityScreen);
+
+/***/ }),
+
+/***/ "./src/components/EndScreen.js":
+/*!*************************************!*\
+  !*** ./src/components/EndScreen.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Header */ "./src/components/Header.js");
+
+
+
+
+
+const EndScreen = ({
+  state,
+  setState
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("main", {
+    "data-testid": "end",
+    className: "EndScreen"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: state.title
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "The End"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => setState({ ...state,
+      startScreenActive: true,
+      endScreenActive: false
+    })
+  }, "Back to Start"));
+};
+
+EndScreen.propTypes = {
+  state: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  setState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
+/* harmony default export */ __webpack_exports__["default"] = (EndScreen);
+
+/***/ }),
+
+/***/ "./src/components/Header.js":
+/*!**********************************!*\
+  !*** ./src/components/Header.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+const Header = ({
+  title
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("header", {
+  "data-testid": "header",
+  className: "Header"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", null, "Header: ", title));
+
+Header.propTypes = {
+  siteTitle: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+Header.defaultProps = {
+  siteTitle: ``
+};
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./src/components/StartScreen.js":
+/*!***************************************!*\
+  !*** ./src/components/StartScreen.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Header */ "./src/components/Header.js");
+
+
+
+
+
+const StartScreen = ({
+  setState,
+  state
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("main", {
+    "data-testid": "start",
+    className: "StartScreen"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: state.title
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+    className: "lesson-title"
+  }, state.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    className: "intro-title"
+  }, state.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    id: "start",
+    className: "btn-start btn",
+    onClick: () => setState({ ...state,
+      startScreenActive: false,
+      activityScreenActive: true
+    })
+  }, "Start"));
+};
+
+StartScreen.propTypes = {
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  description: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  startActivity: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
+StartScreen.defaultProps = {
+  title: ``,
+  lessonTitle: ``
+};
+/* harmony default export */ __webpack_exports__["default"] = (StartScreen);
+
+/***/ }),
+
 /***/ "./src/pages/404.js":
 /*!**************************!*\
   !*** ./src/pages/404.js ***!
@@ -31795,6 +31982,62 @@ const IndexPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.
 }, "Sample Page 2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 
 /* harmony default export */ __webpack_exports__["default"] = (IndexPage);
+
+/***/ }),
+
+/***/ "./src/templates/TemplatePage.js":
+/*!***************************************!*\
+  !*** ./src/templates/TemplatePage.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_StartScreen__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/StartScreen */ "./src/components/StartScreen.js");
+/* harmony import */ var _components_ActivityScreen__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ActivityScreen */ "./src/components/ActivityScreen.js");
+/* harmony import */ var _components_EndScreen__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/EndScreen */ "./src/components/EndScreen.js");
+ // withPrefix has been included for any media that needs to accessed from the data folder
+
+
+
+
+ // grab the data
+
+const query = "1758951987";
+
+const TemplatePage = ({
+  data
+}) => {
+  const interactiveData = data.sampleDataJson;
+  const {
+    0: state,
+    1: setState
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])({
+    title: interactiveData.title,
+    description: interactiveData.description,
+    startScreenActive: true,
+    activityScreenActive: false,
+    endScreenActive: false
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: `Main ${interactiveData.slug}`
+  }, state.startScreenActive && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_StartScreen__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    setState: setState,
+    state: state
+  }), state.activityScreenActive && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ActivityScreen__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    setState: setState,
+    state: state
+  }), state.endScreenActive && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_EndScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    setState: setState,
+    state: state
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TemplatePage);
 
 /***/ }),
 

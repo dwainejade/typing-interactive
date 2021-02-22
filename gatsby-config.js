@@ -34,9 +34,10 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
+    // gatsby-plugin-web-font-loader allows use of adobe fonts
     // {
     //   resolve: "gatsby-plugin-web-font-loader",
     //   options: {
@@ -45,6 +46,7 @@ module.exports = {
     //     },
     //   },
     // },
+    // accessibility plugin for automated UI testing -- warnings and errors appear in console.
     // {
     //   resolve: "gatsby-plugin-react-axe",
     //   options: {

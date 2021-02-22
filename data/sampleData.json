@@ -1,12 +1,12 @@
 [
   {
     "slug": "sample-1",
-    "title": "Sample 1",
-    "description": "This is the sample description for the first sample."
+    "title": "Unit 1",
+    "description": "Lesson 16 Review"
   },
   {
     "slug": "sample-2",
-    "title": "Sample 2",
-    "description": "This is the sample description for the second sample."
+    "title": "Unit 2",
+    "description": "Let's review unit 2!"
   }
 ]
