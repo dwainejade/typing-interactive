@@ -1,0 +1,14 @@
+.Main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+  min-height: 525px;
+  width: 100vw;
+  max-width: 920px;
+}
+.Header {
+  text-align: center;
+  width: 100%;
+  background-color: goldenrod;
+}

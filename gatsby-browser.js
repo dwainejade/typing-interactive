@@ -1,3 +1,2 @@
-// stylesheets
-import "./src/modern-normalize.css"
-import "./src/core.css"
+import "./src/styles/modern-normalize.css"
+import "./src/styles/core.css"
