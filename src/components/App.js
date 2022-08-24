@@ -5,7 +5,7 @@ import { GlobalContext } from '../Contexts/GlobalContext.js'
 import EndScreen from "./EndScreen"
 
 const App = ({ setState, state }) => {
-  const getWords = () => state.referenceText.split(' ').sort(() => Math.random() > 0.5 ? 1 : -1)
+  const getWords = () => state.referenceText?.split(' ').sort(() => Math.random() > 0.5 ? 1 : -1)
   const refWords = useRef(getWords())
   const [correctWords, setCorrectWords] = useState([])
   const [correctCount, setCorrectCount] = useState(0)

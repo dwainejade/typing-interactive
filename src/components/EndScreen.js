@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { GlobalContext } from "../Contexts/GlobalContext"
 
-const EndScreen = ({ setState, state }) => {
+const EndScreen = () => {
     const { handleRestart, userStats, refWords } = useContext(GlobalContext)
     const total = refWords.current.length
     return (

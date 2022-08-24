@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import { GlobalContext } from '../Contexts/GlobalContext'
 
 function Info() {
-    const { state, setState, startCounting, correctWords, timeElapsed, setTimeElapsed, refWords, handleReset, userStats, setUserStats } = useContext(GlobalContext)
+    const { state, setState, startCounting, correctWords, timeElapsed, setTimeElapsed, refWords, handleReset, setUserStats } = useContext(GlobalContext)
 
     const errors = correctWords.filter(item => item === false).length
     const correctCount = correctWords.filter(Boolean).length
