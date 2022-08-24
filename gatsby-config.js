@@ -1,8 +1,8 @@
 module.exports = {
-  pathPrefix: `/sandbox-cb/public`,
+  pathPrefix: `/typing-interactive/public`,
   siteMetadata: {
-    title: `Sandbox`,
-    description: `Sandbox`,
+    title: `Typing Interactive`,
+    description: `Typing Interactive`,
     author: `StrongMind`,
   },
   plugins: [

@@ -1,0 +1,95 @@
+.keyboard-con {
+  width: 700px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.key {
+  border: none;
+  background-color: #333;
+  color: #fff;
+  margin: 1px;
+  width: 45px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    background-color: rgb(232, 255, 80);
+    color: #333;
+  }
+  &.disabled {
+    opacity: 0.5;
+    &.active {
+      background-color: red;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.row-1 {
+  margin-right: 65px;
+}
+.row-2 {
+  justify-self: flex-start;
+  .tab {
+    width: 70px;
+  }
+  .P,
+  .p {
+    margin-right: 150px;
+  }
+}
+.row-3 {
+  .caps.lock {
+    width: 85px;
+  }
+  .enter {
+    width: 80px;
+  }
+}
+.row-4 {
+  .shift {
+    width: 100px;
+  }
+}
+.row-5 {
+  .space {
+    width: 280px;
+  }
+
+  .up-down-con {
+    background-color: #fff;
+    width: 50px;
+
+    .key-up {
+      align-self: flex-start;
+      height: 50%;
+      background-color: black;
+      border-radius: 5px;
+      min-width: 100%;
+    }
+    .key-down {
+      height: 50%;
+      align-self: flex-end;
+      background-color: black;
+      border-radius: 5px;
+      margin-top: 2px;
+      width: 100%;
+    }
+  }
+
+  .key.left,
+  .key.right {
+    height: 50%;
+    align-self: flex-end;
+  }
+}

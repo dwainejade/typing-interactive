@@ -1,32 +1,28 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Header from "./Header"
+import React, { useContext } from "react"
+import { GlobalContext } from "../Contexts/GlobalContext"
 
-const EndScreen = ({ state, setState }) => {
-  return (
-    <main data-testid="end" className="EndScreen">
-      <Header title={state.title} />
-      <h2>The End</h2>
-      {/* placeholder buttonto go back to start */}
-      <button
-        onClick={() =>
-          setState({
-            ...state,
-            startScreenActive: true,
-            endScreenActive: false,
-          })
-        }
-      >
-        Back to Start
-      </button>
-    </main>
-  )
-}
-
-EndScreen.propTypes = {
-  state: PropTypes.object,
-  setState: PropTypes.func,
+const EndScreen = ({ setState, state }) => {
+    const { handleRestart, userStats, refWords } = useContext(GlobalContext)
+    const total = refWords.current.length
+    return (
+        <main data-testid="start" className="EndScreen">
+            <h1 className="intro-title">End Screen</h1>
+            {(total - userStats.incorrect) > (total * .65)
+                ? <h3>Great Job!</h3>
+                : <h3>Try Again!</h3>
+            }
+            <p>you got <b>{userStats.correct}</b> correct out of <b>{total}</b></p>
+            <div>missed text: {userStats.missed.map(item => <span>{item}</span>)}</div>
+            <p>speed: {userStats.speed}</p>
+            <button
+                id="start"
+                className="btn-start btn"
+                onClick={() => handleRestart()}
+            >
+                Restart
+            </button>
+        </main>
+    )
 }
 
 export default EndScreen

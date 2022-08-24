@@ -1,42 +1,26 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Header from "./Header"
+import React, { useContext } from "react"
+import Keyboard from './keyboard'
+import ReferenceText from './ReferenceText'
+import OutputText from './OutputText'
+import Info from './Info'
+import { GlobalContext } from '../Contexts/GlobalContext.js'
+import '../styles/core.css'
 
-const ActivityScreen = ({ state, setState }) => {
-  return (
-    <main data-testid="activity" className="ActivityScreen">
-      <Header title={state.title} />
-      <h2>Main Activity Content</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.{" "}
-      </p>
-      {/* placeholder button to skip to the end screen */}
-      <button
-        onClick={() =>
-          setState({
-            ...state,
-            endScreenActive: true,
-            activityScreenActive: false,
-          })
-        }
-      >
-        Skip to the end
-      </button>
-    </main>
-  )
-}
+const ActivityScreen = () => {
+    const { handleReset, handleEnd } = useContext(GlobalContext)
 
-ActivityScreen.propTypes = {
-  title: PropTypes.string,
-  lessonTitle: PropTypes.string,
-  startActivity: PropTypes.func,
-}
-
-ActivityScreen.defaultProps = {
-  title: ``,
-  lessonTitle: ``,
+    return (
+        <main data-testid="activity" className="activity-screen">
+            <div className="layout-left">
+                <ReferenceText />
+                <Keyboard />
+                <OutputText />
+            </div>
+            <div className="layout-right">
+                <Info />
+            </div>
+        </main>
+    )
 }
 
 export default ActivityScreen

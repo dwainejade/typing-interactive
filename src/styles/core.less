@@ -1,15 +1,23 @@
 .Main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  height: 100vh;
-  min-height: 525px; // reqd for interactive to display correctly in H2. adjust if needed.
-  width: 100vw;
-  max-width: 920px; 
-}
+  justify-content: center;
 
-.Header {
-  text-align: center;
-  width: 100%;
-  background-color: goldenrod;
+  height: 100vh;
+  max-height: 525px; // reqd for interactive to display correctly in H2. adjust if needed.
+  width: 100vw;
+  max-width: 920px;
+  overflow: hidden;
+  padding: 0 1rem;
+
+  .lesson-title {
+    padding: 0;
+    margin: 0;
+    margin: 10px 0;
+  }
+
+  .activity-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
 }

@@ -1,0 +1,40 @@
+.reference-wrapper {
+  .text-con {
+    // border: solid #777 2px;
+    height: 80px;
+    width: 700px;
+    overflow-y: auto;
+    font-size: 1rem;
+    font-family: monospace;
+    padding: 0.2rem 1rem;
+    line-height: 1.8rem;
+
+    span {
+      vertical-align: text-top;
+      transition: all ease 0.3s;
+    }
+
+    .active {
+      font-weight: bold;
+      color: rgb(27, 134, 240);
+    }
+    .correct {
+      background-color: bisque;
+      color: green;
+    }
+    .incorrect {
+      background-color: bisque;
+      color: salmon;
+    }
+  }
+
+  .single-word-con {
+    font-size: 3rem;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+}

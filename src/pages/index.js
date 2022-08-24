@@ -3,10 +3,11 @@ import { Link } from "gatsby"
 
 const IndexPage = () => (
   <>
-    <Link to="/sample-1/">Sample Page 1</Link>
+    <Link to="/typing-1/">Sentence</Link>
     <br />
-    <Link to="/sample-2/">Sample Page 2</Link>
+    <Link to="/typing-2/">Single Word</Link>
     <br />
+    <Link to="/typing-3/">Letter</Link>
   </>
 )
 

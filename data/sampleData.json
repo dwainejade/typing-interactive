@@ -8,5 +8,44 @@
     "slug": "sample-2",
     "title": "Unit 2",
     "description": "Let's review unit 2!"
+  },
+  {
+    "slug": "typing-1",
+    "title": "Lesson 1",
+    "activityType": "sentence",
+    "timed": true,
+    "progress": true,
+    "errors": true,
+    "speed": true,
+    "startImage": "",
+    "description": "Timed exercise. All Keys enabled. Random words.",
+    "enabledKeys": "all",
+    "referenceText": "crow trap encourage melt bat introduce triumph inquire fit expect clouds dolls horse deprive light fancy knot test word open make last smart pocket"
+  },
+  {
+    "slug": "typing-2",
+    "title": "Lesson 2",
+    "activityType": "single-word",
+    "timed": false,
+    "progress": true,
+    "errors": true,
+    "speed": false,
+    "startImage": "",
+    "description": "Untimed: Single Word",
+    "enabledKeys": "all",
+    "referenceText": "school camera twist common money wool uneven sleepy hollow"
+  },
+  {
+    "slug": "typing-3",
+    "title": "Lesson 3",
+    "activityType": "single-letter",
+    "timed": false,
+    "progress": false,
+    "errors": true,
+    "speed": false,
+    "startImage": "",
+    "description": "Untimed: Single Letter",
+    "enabledKeys": "a s d f g h j k l ;",
+    "referenceText": "a s d f g h j k l ;"
   }
 ]
